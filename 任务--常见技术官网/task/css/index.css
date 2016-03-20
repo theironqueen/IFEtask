@@ -151,7 +151,11 @@ img{
 }
 #banner div.banner-header-content div a:hover{
 	color: #fff;
+<<<<<<< HEAD
 	background-color: #
+=======
+	background-color: #E85F5F;
+>>>>>>> d94064243f1c16d8936975fc04121c8511ff1380
 }
 #banner div.banner-header-mask{
 	width: 100%;
@@ -354,6 +358,9 @@ img{
 	margin-left: 30px;
 	font-size: 14px;
 	letter-spacing: 30px;
+}
+#search form.search-form div.search-btn:hover{
+	background-color: #E85F5F;
 }
 /* search style end*/
 
@@ -760,6 +767,10 @@ img{
 	outline: medium none;
 	cursor: pointer;
 }
+#joinus form.joinus-form button:hover{
+	background-color: #DBDBDB;
+	color: #666;
+}
 /* joinus style end*/
 
 /* footer style start*/
@@ -818,6 +829,10 @@ img{
 	background-color: #6F7178;
 	font-size: 15px;
 	color: #fff;
+	cursor: pointer;
+}
+#footer div.contact-email button:hover{
+	background-color: #E7514F;
 }
 #footer div.friendlinks{
 	width: 100%;
