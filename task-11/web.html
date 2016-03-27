@@ -1,0 +1,196 @@
+<!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-CH"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+<head>
+    <!-- 声明文档使用的字符编码 -->
+    <meta charset='utf-8'>
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport"  content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <title>移动Web页面布局</title>
+    <link rel="stylesheet" type="text/css" href="./style/web.css">
+</head>
+<body>
+	<header id="wap-header">
+		<a class="header-back font-16" href="#"><i class="fa-back">< </i><span>返回</span></a>
+		<h1 class="header-title font-20">这是标题</h1>
+	</header>
+	<section class="wap-panel" id="wap-nav">
+		<ul class="nav-list font-14">
+			<li class="nav-item active"><a href="#">导航</a></li>
+			<li class="nav-item"><a href="#">导航</a></li>
+			<li class="nav-item"><a href="#">导航</a></li>
+			<li class="nav-item"><a href="#">导航</a></li>
+			<li class="nav-item"><a href="#">导航</a></li>
+		</ul>
+	</section>
+	<section class="wap-panel" id="wap-banner">
+		<picture>
+		    <!--[if IE 9]><video style="display: none;"><![endif]-->
+		    <source srcset="./image/bigger-banner.jpg" media="(min-width: 30rem)">
+		    <source srcset="./image/default-banner.jpg">
+		    <!--[if IE 9]></video><![endif]-->
+		    <img srcset="./image/default-banner.jpg" alt="web banner">
+		</picture>
+	</section>
+	<section class="wap-panel" id="wap-tab">
+		<ul class="tab-list">
+			<li class="tab-item">
+				<a href="#">
+					<div><i class="fa-tab"></i></div>
+					<h2 class="font-14">标签</h2>
+				</a>
+			</li>
+			<li class="tab-item">
+				<a href="#">
+					<div><i class="fa-tab"></i></div>
+					<h2 class="font-14">标签</h2>
+				</a>
+			</li>
+			<li class="tab-item">
+				<a href="#">
+					<div><i class="fa-tab"></i></div>
+					<h2 class="font-14">标签</h2>
+				</a>
+			</li>
+			<li class="tab-item">
+				<a href="#">
+					<div><i class="fa-tab"></i></div>
+					<h2 class="font-14">标签</h2>
+				</a>
+			</li>
+			<li class="tab-item">
+				<a href="#">
+					<div><i class="fa-tab"></i></div>
+					<h2 class="font-14">标签</h2>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section class="wap-panel m-b-10" id="wap-column">
+		<ul class="column-list">
+			<li class="column-item">
+				<a href="#">
+					<div><img src="./image/column1.jpg" alt="column1" /></div>
+					<h2 class="font-16">分栏一</h2>
+					<h3 class="font-14">分栏小标题</h3>
+				</a>
+			</li>
+			<li class="column-item">
+				<a href="#">
+					<div><img src="./image/column2.jpg" alt="column2" /></div>
+					<h2 class="font-16">分栏二</h2>
+					<h3 class="font-14">分栏小标题</h3>
+				</a>
+			</li>
+			<li class="column-item">
+				<a href="#">
+					<div><img src="./image/column3.jpg" alt="column3" /></div>
+					<h2 class="font-16">分栏二</h2>
+					<h3 class="font-14">分栏小标题</h3>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section class="wap-panel" id="wap-mod">
+		<section class="wap-mod m-b-10">
+			<header class="mod-title"><h2>模块一</h2></header>
+			<div class="mod-container">
+				<ul class="mod-list">
+					<li class="mod-item">
+						<div class="mod-image-container">
+							<img src="./image/mod.jpg" alt="head picture">
+						</div>
+						<ul class="mod-sublist font-14">
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+						</ul>
+					</li>
+					<li class="mod-item">
+						<div class="mod-image-container">
+							<img src="./image/mod.jpg" alt="head picture">
+						</div>
+						<ul class="mod-sublist font-14">
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="wap-mod m-b-10">
+			<header class="mod-title"><h2>模块二</h2></header>
+			<div class="mod-container">
+				<ul class="mod-list">
+					<li class="mod-item">
+						<div class="mod-image-container">
+							<img src="./image/mod.jpg" alt="head picture">
+						</div>
+						<ul class="mod-sublist font-14">
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+						</ul>
+					</li>
+					<li class="mod-item">
+						<div class="mod-image-container">
+							<img src="./image/mod.jpg" alt="head picture">
+						</div>
+						<ul class="mod-sublist font-14">
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+							<li class="mod-subitem"><a href="#">这是文案</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</section>
+	<section class="wap-panel" id="wap-article">
+		<ul class="article-list">
+			<li class="article-item">
+				<div class="article-item-container">
+					<div class="article-picture-container"><img src="./image/article-picture.jpg" alt="article picture"></div>
+					<div class="article-container">
+						<h2 class="article-title font-20"><a href="#">这是文章标题这是文章标题这是文章标题</a></h2>
+						<p class="article-info font-14">文章来源 <span class="article-time">6分钟</span>前</p>
+					</div>
+				</div>
+			</li>
+			<li class="article-item">
+				<div class="article-item-container">
+					<div class="article-picture-container"><img src="./image/article-picture.jpg" alt="article picture"></div>
+					<div class="article-container">
+						<h2 class="article-title font-20"><a href="#">这是文章标题这是文章标题这是文章标题</a></h2>
+						<p class="article-info font-14">文章来源 <span class="article-time">7分钟</span>前</p>
+					</div>
+				</div>
+			</li>
+			<li class="article-item">
+				<h2 class="article-title font-20"><a href="#">这是文章标题这是文章标题这是文章标题</a></h2>
+				<div class="article-picture-containers"><img src="./image/article-picture.jpg" alt="article picture"><img src="./image/article-picture.jpg" alt="article picture"><img src="./image/article-picture.jpg" alt="article picture"></div>
+				<p class="article-info font-14">文章来源 <span class="article-time">7分钟</span>前</p>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>

@@ -1,0 +1,346 @@
+/* begin global style */
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background-color: #f2f2f2;
+	font-family: "微软雅黑";
+	color: #000;
+	box-sizing: border-box;
+}
+body{
+	font-size:12px;
+	font-size:0.75rem;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+ul{
+	list-style-type: none;
+}
+img{
+	border: none;
+}
+.font-22{
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+.font-20{
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+.font-16{
+	font-size: 16px;
+	font-size: 1rem;
+}
+.font-14{
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.font-12{
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+.m-b-10{
+	margin-bottom: 10px;
+}
+.p-b-10{
+	padding-bottom: 10px;
+}
+.wap-panel{
+	width: 100%;
+	background-color: #fff;
+}
+/* end global style */
+
+/* begin wap-header style */
+#wap-header{
+	width: 100%;
+	background-color: yellow;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	z-index: 1;
+	background-color: #91d4da;
+	color: #fff;
+}
+#wap-header h1{
+	height: 4rem;
+	line-height: 4rem;
+	overflow: hidden;
+}
+#wap-header a{
+	position: absolute;
+	height: 4rem;
+	line-height: 4rem;
+	z-index: 2;
+	left: 0.4rem;
+	color: #fff;
+}
+#wap-header a i.fa-back,#wap-header a span{
+	height: 4rem;
+	line-height: 4rem;
+	display: inline-block;
+	font-style: normal;
+}
+/* end wap-header style */
+/* begin wap-nav style */
+#wap-nav{
+	height: 3rem;
+	line-height: 3rem;
+	border-top: 4rem solid transparent;
+}
+#wap-nav .nav-list{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+#wap-nav .nav-item{
+	flex: 1;
+	text-align: center;
+	line-height: 3rem;
+	border-bottom: 0.2rem solid transparent;
+}
+#wap-nav li.active{
+	border-bottom: 0.2rem solid #91d4da;
+}
+/* end wap-nav style */
+
+/* begin wap-banner style */
+#wap-banner{
+	height: 12rem;
+}
+#wap-banner img{
+	height: 12rem;
+	width: 100%;
+}
+/* end wap-banner style */
+
+/* begin wap-tab style */
+#wap-tab{
+	height: 7rem;
+}
+#wap-tab .tab-list{
+	width: 96%;
+	height: 7rem;
+	margin: 0 auto;
+	display: flex;
+	border-bottom: 0.15rem solid #e5e5e5;
+	box-sizing: border-box;
+}
+#wap-tab .tab-item{
+	flex: 1;
+}
+#wap-tab .tab-item a{
+	height: 5.5rem;
+	display: block;
+	text-align: center;
+}
+#wap-tab .tab-item a div{
+	height: 3.2rem;
+	width: 3.2rem;
+	background-color: #00c7d6;
+	border-radius: 3.2rem;
+	margin: 1rem auto 0.6rem;
+}
+#wap-tab .tab-item a div .fa-tab{
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-image: url(../image/fa-tab.png);
+	background-repeat: no-repeat;
+	background-size: 2.5rem,2.5rem;
+	background-position: center;
+}
+#wap-tab .tab-item a h2{
+	height: 1.2rem;
+	line-height: 1.2rem;
+	overflow: hidden;
+	font-weight: normal;
+}
+/* end wap-tab style */
+
+/* begin wap-column style*/
+#wap-column{
+	height: 10rem;
+}
+#wap-column .column-list{
+	height: 8rem;
+	width: 96%;
+	margin: 0 auto;
+	padding-top: 1rem;
+	display: flex;
+}
+#wap-column .column-item{
+	flex: 1;
+	text-align: center;
+	border-right: 0.15rem solid #e5e5e5;
+	box-sizing: border-box;
+}
+#wap-column .column-item:last-child{
+	border-right: none;
+}
+#wap-column .column-item a div{
+	height: 4.8rem;
+	width: 100%;
+}
+#wap-column .column-item a div img{
+	height: 4.8rem;
+	width: 100%;
+	max-width: 7.2rem;
+	margin: 0 auto;
+
+}
+#wap-column .column-item a h2{
+	height: 2rem;
+	line-height: 2rem;
+}
+#wap-column .column-item a h3{
+	font-weight: normal;
+	color: #666;
+}
+/* end wap-column style*/
+
+/* start wap-mod style*/
+#wap-mod{
+	background: none;
+}
+.wap-mod{
+	background-color: #fff;
+	width: 100%;
+}
+.wap-mod .mod-title{
+	height: 3rem;
+	line-height: 3rem;
+	width: 96%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-bottom: 0.15rem solid #EFEFEF;
+}
+.wap-mod .mod-container{
+	width: 98%;
+	margin-left: 2%;
+}
+.wap-mod .mod-container ul.mod-list{
+	margin-top: 1rem;
+}
+.wap-mod .mod-container ul.mod-list li.mod-item{
+	height: 6rem;
+	width: 100%;
+	padding-bottom: 0.5rem;
+	display: flex;
+}
+.wap-mod .mod-container ul.mod-list li.mod-item div.mod-image-container{
+	flex: 1;
+	height: 6rem;
+	max-width: 7rem;
+}
+.wap-mod .mod-container ul.mod-list li.mod-item div.mod-image-container img{
+	box-sizing: border-box;
+	height: 6rem;
+	width: 6rem;
+	border: 0.1rem solid #FCD584;
+}
+.wap-mod .mod-container ul.mod-list li.mod-item ul.mod-sublist{
+	flex: 2;
+	height: 6rem;
+	width: 100%;
+}
+.wap-mod .mod-container ul.mod-list li.mod-item ul.mod-sublist li.mod-subitem{
+	float: left;
+	width: 47%;
+	margin-right: 3%;
+	margin-bottom: 0.5rem;
+	height: 2.75rem;
+	background-color: #F8F8F8;
+	text-align: center;
+}
+.wap-mod .mod-container ul.mod-list li.mod-item ul.mod-sublist li.mod-subitem a{
+	display: block;
+	height: 2.75rem;
+	width: 100%;
+	color: #000;
+	line-height: 2.75rem;
+}
+/* end wap-mod style*/
+
+/* begin wap-article style*/
+#wap-article{
+	background: none;
+}
+#wap-article ul.article-list{
+	width: 100%;
+}
+#wap-article li.article-item{
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 0.2rem;
+}
+#wap-article div.article-item-container{
+	width: 96%;
+	height: 5rem;
+	margin: 0rem auto;
+	padding: 0.5rem 0;
+	display: flex;
+}
+#wap-article .article-picture-container{
+	flex:1;
+	height: 5rem;
+	width: 7rem;
+	max-width: 7rem;
+}
+#wap-article .article-picture-container img{
+	flex:1;
+	height: 5rem;
+	width: 7rem;
+	max-width: 7rem;
+}
+#wap-article .article-container{
+	flex:2;
+	height: 5rem;
+}
+#wap-article h2.article-title{
+	width: 92%;
+	margin-left: 2%;
+	height: 4rem;
+}
+#wap-article h2.article-title a{
+	display: block;
+	height: 4rem;
+	width: 100%;
+	overflow-y: auto;
+}
+#wap-article p.article-info{
+	width: 96%;
+	margin: 0 auto;
+	height: 1rem;
+	line-height: 1rem;
+	color: #666;
+}
+#wap-article .article-picture-containers{
+	display: flex;
+	width: 96%;
+	margin: 0 auto;
+	height: 5rem;
+}
+#wap-article .article-picture-containers img{
+	flex: 1;
+	height: 5rem;
+	width: 7rem;
+	max-width: 7rem;
+	margin-right: 0.2rem;
+}
+#wap-article li.article-item>h2.article-title{
+	height: auto;
+	padding: 0.5rem 0;
+}
+#wap-article li.article-item>h2.article-title>a{
+	height: auto;
+}
+#wap-article li.article-item>p.article-info{
+	padding: 0.5rem 0;
+}
+/* end wap-article style*/
