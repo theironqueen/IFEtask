@@ -1,4 +1,4 @@
-/* begin global style */
+﻿/* begin global style */
 *{
 	margin: 0;
 	padding: 0;
@@ -343,12 +343,11 @@ img{
 	width: 92%;
 	margin-left: 2%;
 	height: 4rem;
+	overflow-y: auto;
 }
 #wap-article h2.article-title a{
 	display: block;
-	height: 4rem;
 	width: 100%;
-	overflow-y: auto;
 }
 #wap-article p.article-info{
 	width: 96%;
