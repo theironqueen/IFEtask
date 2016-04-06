@@ -20,9 +20,18 @@
 			 */
 			this.on('click', '.queen-select-title', function(event) {
 				var $this = $(this);
-				console.log($this.html());
-				$list = $this.parent().find(".queen-select-list");
-				$icon = $this.find('i.queen-triangle');
+				var $list = $this.parent().find(".queen-select-list");
+				var $lists = $(".queen-select-list");
+				//点击一个select的时候 将其他的展开的select全部折叠
+				$lists.each(function(index, el) {
+					if($(this).attr("title") == $list.attr("title")) return;
+					var $icon = $(this).parent().find('i.queen-triangle');
+					if(!$(this).hasClass('queen-hide')){
+						$(this).addClass('queen-hide');
+						$icon.removeClass('queen-triangle-up');
+					}
+				});
+				var $icon = $this.find('i.queen-triangle');
 				if($list.hasClass('queen-hide')){
 					$list.removeClass('queen-hide');
 					$icon.addClass('queen-triangle-up');
@@ -91,7 +100,7 @@
 	 * @param  {array} items      select中的所有option的value和内容
 	 */
 	function create_list($container, items){
-		var $list = $("<ul class='queen-select-list queen-hide'></ul>");
+		var $list = $("<ul class='queen-select-list queen-hide' title='"+getTime()+"'></ul>");
 		$container.append($list);
 		for (var key in items) {
 			$list = create_item($list, key, items[key]);
@@ -103,5 +112,17 @@
 		$list.append($item);
 		$item.attr("title", value).html(text);
 		return $list;
+	}
+	//用来设置select的标识
+	function getTime(){
+		var date = new Date();
+		var year = ("0000" + date.getFullYear()).substr(-4);
+    	var month = ("00" + (date.getMonth() + 1)).substr(-2);
+    	var day = ("00" + date.getDay()).substr(-2);
+    	var hour = ("00" + date.getHours()).substr(-2);
+    	var minute = ("00" + date.getMinutes()).substr(-2);
+    	var second = ("00" + date.getSeconds()).substr(-2);
+    	var millisecond = ("000" + date.getMilliseconds()).substr(-3);
+    	return year + "" + month + "" + day + "" + hour + "" + minute + "" + second + "" + millisecond;
 	}
 })(window.jQuery);
