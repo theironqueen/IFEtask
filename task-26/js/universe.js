@@ -22,10 +22,8 @@ var Universe = (function(){
 			}
 		}
 	}
-	//对外接口
-	return {
-		//使用mediator介质传播信息
-		Mediator: {
+	//使用mediator介质传播信息
+	var Mediator = {
 			receive: {
 				/**
 				 * 获取创建一艘新飞船信息
@@ -62,6 +60,23 @@ var Universe = (function(){
 					},1000);
 				}
 
+			}
+	}
+
+	//对外接口
+	return {
+		/**
+		 * 介质使用此进行传输
+		 * 提供一个总对外的方法，内部实现方法的更改不会造成外部代码的更改
+		 */
+		Media:{
+			receive:{
+				createMessage: function(message){
+					Mediator.receive.createMessage(message);
+				},
+				oprateMessage: function(message){
+					Mediator.receive.oprateMessage(message);
+				}
 			}
 		}
 	};

@@ -14,7 +14,7 @@ var Commander = (function(){
 		//指挥官面板item创建
 		Tool.control.createControl(title, ship_id);
 		//发送创建信息
-		Universe.Mediator.receive.createMessage({
+		Universe.Media.receive.createMessage({
 			"orbit_id": orbit_id,
 			"ship_id": ship_id,
 			"energy_type": energy_type,
@@ -23,7 +23,7 @@ var Commander = (function(){
 	}
 
 	function oprateMessage(ship_id, commond){
-		Universe.Mediator.receive.oprateMessage({
+		Universe.Media.receive.oprateMessage({
 			"ship_id": ship_id,
 			"commond": commond
 		});
@@ -34,7 +34,7 @@ var Commander = (function(){
 			if(ships[i] == ship_id)
 				ships[i] = null;
 		Tool.control.destroyControl(ship_id);
-		Universe.Mediator.receive.oprateMessage({
+		Universe.Media.receive.oprateMessage({
 			"ship_id": ship_id,
 			"commond": "destroy"
 		});
