@@ -1,0 +1,385 @@
+/**
+ * 全局样式
+ */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	background-color: #000;
+}
+ul{
+	list-style-type: none;
+}
+/**
+ * 全局变量
+ */
+@ship-success-color: #176A27;
+@ship-success-hover-color: #1F8331;
+@ship-warning-color: #B9710F;
+@ship-warning-hover-color: #D38112;
+@ship-danger-color: #90201F;
+@ship-danger-hover-color: #AD2929;
+@ship-info-color: #3EAA9D;
+@ship-info-hover-color: #5AC9BC;
+
+/**
+ * 总容器
+ */
+
+.container{
+	height: 100%;
+	width: 100%;
+	min-width: 1200px;
+	min-height: 800px;
+
+}
+/**
+ * 虚拟宇宙样式
+ */
+#universe{
+	float: left;
+	width: 60%;
+	height: 100%;
+	position: relative;
+}
+#universe h1{
+	color: white;
+	text-align: center;
+	width: 100%;
+	font-size: 24px;
+	padding-top: 10px;
+}
+.universe-pos{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+}
+.planet-orbit-style(@size){
+	.universe-pos;
+	width: @size;
+	height: @size;
+	border-radius: @size/2;
+	margin-top: -@size/2;
+	margin-left: -@size/2;
+}
+.planet{
+	.planet-orbit-style(150px);
+	background-color: #00B4FF;
+
+}
+.orbit{
+	border: 1px solid #333;
+}
+
+#orbit-1{
+	.planet-orbit-style(250px);
+}
+#orbit-2{
+	.planet-orbit-style(400px);
+}
+#orbit-3{
+	.planet-orbit-style(550px);
+}
+#orbit-4{
+	.planet-orbit-style(700px);
+}
+
+.space-ship{
+	.universe-pos;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	margin-left: -25px;
+	background-color: #222;
+	border: 1px solid #666;
+	text-align: center;
+	color: white;
+	overflow: hidden;
+	transform: rotate(0deg);
+	box-sizing: border-box;
+	div.ship-energy{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		bottom: 0px;
+		z-index: 1;
+		transform-origin: 25px 0px;
+		transform: rotate(0deg);
+	}
+	div.ship-energy-success{
+		background-color: @ship-success-color;
+	}
+	div.ship-energy-warning{
+		background-color: @ship-warning-color;
+	}
+	div.ship-energy-danger{
+		background-color: @ship-danger-color;
+	}
+	div.ship-info{
+		position: absolute;
+		margin-top: 6px;
+		z-index: 2;
+		transform: rotate(0deg);
+		width: 100%;
+	}
+}
+.space-ship-1{
+	margin-top: -150px;
+	transform-origin: 50% 150px;
+}
+.space-ship-2{
+	margin-top: -225px;
+	transform-origin: 50% 225px;
+}
+.space-ship-3{
+	margin-top: -300px;
+	transform-origin: 50% 300px;
+}
+.space-ship-4{
+	margin-top: -375px;
+	transform-origin: 50% 375px;
+}
+/**
+ * 侧边栏样式
+ */
+#sidebar{
+	float: left;
+	width: 40%;
+	height: 100%;
+	background-color: #333;
+	box-shadow: 1px 0px 10px 0px white;
+}
+@header-height: 60px;
+#sidebar>header{
+	height: @header-height;
+	width: 100%;
+	border-bottom: 2px solid #999;
+	box-sizing: border-box;
+	h1{
+		font-weight: normal;
+		font-size: 24px;
+		height: @header-height;
+		line-height: @header-height;
+		color: white;
+		float: left;
+		text-indent: 2em;
+	}
+	i{
+		float: left;
+		color: white;
+		font-size: 16px;
+		padding: 25px 0px 0px 10px;
+	}
+}
+#sidebar>section{
+	margin-top: 10px;
+}
+
+@title-height: 30px;
+.title{
+	height: @title-height;
+	width: 90%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	h1{
+		height: @title-height;
+		line-height: @title-height;
+		color: white;
+		font-weight: normal;
+		float: left;
+		padding: 0px 20px;
+		background-color:  #111;
+		font-size: 16px;
+		border-radius: 10px 10px 0px 0px;
+	}
+}
+/**
+ * 面板基本样式 
+ */
+.board{
+	width: 90%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border: 1px solid #555;
+	background-color: #111;
+	overflow-y: auto;
+}
+/**
+ * 控制面板
+ */
+.control-board{
+	overflow: initial;
+}
+.ship-list{
+	width: 95%;
+	margin: 10px auto 0px;
+	li.ship-item{
+		height: 40px;
+		width: 100%;
+		margin-bottom: 10px;
+		h2.item-title{
+			float: left;
+			height: 40px;
+			line-height: 40px;
+			color: #66D9EF;
+			font-weight: normal;
+			font-size: 16px;
+		}
+		div.item-oprate{
+			float: left;
+			height: 40px;
+			line-height: 40px;
+			margin-left: 20px;
+		}
+	}
+	li:last-child{
+		border-bottom: 1px solid #333;
+	}
+}
+/**
+ * 按钮样式
+ */
+.ship-status-size{
+	height: 30px;
+	width: 80px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+}
+.ship-status-label{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: white;
+}
+.ship-status{
+	.ship-status-size;
+	float: left;
+	margin-top: 5px;
+	overflow: hidden;
+	position: relative;
+	input{
+		.ship-status-size;
+		opacity: 0;
+		cursor: pointer;
+		position: absolute;
+		left: 0px;
+		z-index: 2;
+	}
+	input:checked + label:after{
+		opacity: 1;
+		transition: 0.5s;
+	}
+	label{
+		.ship-status-size;
+		display: block;
+	}
+	input:hover + label:after{
+		transition: 0.5s;
+		background-color: @ship-warning-hover-color;
+	}
+	input:hover + label:before{
+		transition: 0.5s;
+		background-color: @ship-success-hover-color;
+	}
+	label:after{
+		.ship-status-size;
+		.ship-status-label;
+		content:"停止飞行";
+		z-index: 1;
+		background-color: @ship-warning-color;
+		opacity: 0;
+		transition: 0.5s;
+	}
+	label:before{
+		.ship-status-size;
+		.ship-status-label;
+		content: "开始飞行";
+		background-color: @ship-success-color;
+		transition: 0.5s;
+	}
+}
+
+.ship-destroy{
+	.ship-status-size;
+	background-color: @ship-danger-color;
+	transition: 0.5s;
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+	cursor: pointer;
+	color: white;
+}
+.ship-destroy:hover{
+	transition: 0.5s;
+	background-color: @ship-danger-hover-color;
+}
+
+.ship-add-container{
+	height: 50px;
+	width: 100%;
+}
+/**
+ * 轨道选择按钮
+ */
+.orbit-select-container{
+	.ship-add;
+	width: 100px;
+	border-radius: 0px;
+	float: left;
+	font-size: 14px;
+}
+/**
+ * 创建新飞船按钮
+ */
+.ship-add{
+	.ship-status-size;
+	background-color: @ship-info-color;
+	transition: 0.5s;
+	cursor: pointer;
+	color: white;
+	margin-left: 2.5%;
+	margin: 10px 0px 10px 2.5%;
+	float: left;
+}
+.ship-add:hover{
+	transition: 0.5s;
+	background-color: @ship-info-hover-color;
+}
+/**
+ * 输出面板
+ */
+.console-board{
+	min-height: 300px;
+	height: 37.5%;
+	max-height: 400px;
+}
+.console-list{
+	width: 95%;
+	height: 95%;
+	margin: 2% auto;
+	overflow-y: auto;
+	li.console-item{
+		line-height: 20px;
+		font-size: 14px;
+	}
+	li.success-message{
+		color: @ship-success-color;
+	}
+	li.warning-message{
+		color: @ship-warning-color;
+	}
+	li.danger-message{
+		color: @ship-danger-color;
+	}
+	li.info-message{
+		color: @ship-info-color;
+	}
+}
+
