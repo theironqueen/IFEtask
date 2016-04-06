@@ -18,8 +18,9 @@
 			/**
 			 * select 显示和隐藏切换
 			 */
-			$(".queen-select-title").unbind("click").bind("click",function(){
+			this.on('click', '.queen-select-title', function(event) {
 				var $this = $(this);
+				console.log($this.html());
 				$list = $this.parent().find(".queen-select-list");
 				$icon = $this.find('i.queen-triangle');
 				if($list.hasClass('queen-hide')){
@@ -30,14 +31,15 @@
 					$icon.removeClass('queen-triangle-up');
 				}
 			});
+
 			/**
 			 * select内容选择
 			 */
-			$(".queen-container").on('click', '.queen-select-item', function(event) {
+			this.on('click', '.queen-select-item', function(event) {
 				var text = $(this).html();
 				var value = $(this).attr("title");
-				$(".queen-select-title").click().find("h2").html(text);
-				$(".queen-select").attr("value",value);
+				$(this).parents(".queen-container").find(".queen-select-title").click().find("h2").html(text);
+				$(this).parents(".queen-container").find(".queen-select").attr("value",value);
 				$(this).parent().find(".queen-select-item").removeClass("active");
 				$(this).addClass("active");
 			});
