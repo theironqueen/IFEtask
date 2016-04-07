@@ -27,7 +27,8 @@ var Tool = {
 	 * @param  {object} message      信息内容
 	 * @param  {int} status       信息状态
 	 */
-	logAdapter: function(color_type, message_type, message, status = -1){
+	logAdapter: function(color_type, message_type, message, status){
+		if(arguments.length == 3) status = -1;
 		var text = Tool.getTime() + ": ";
 		switch (message_type) {
 			case "create": 
