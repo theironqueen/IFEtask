@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>行星与飞船</title>
+	<!-- <link rel="stylesheet/less"  href="./css/queen.less" />
+	<link rel="stylesheet/less"  href="./css/index.less" />
+	<script type="text/javascript" src="./js/less.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="./css/queen.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+	<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="./js/queen.js"></script>
+	<script type="text/javascript" src="./js/tool.js"></script>
+	<script type="text/javascript" src="./js/ship.js"></script>
+	<script type="text/javascript" src="./js/universe.js"></script>
+	<script type="text/javascript" src="./js/commander.js"></script>
+	<script type="text/javascript" src="./js/dc.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<div class="container">
+		<section id="universe">
+			<header><h1>虚拟宇宙</h1></header>
+			<div class="planet"></div>
+			<div class="orbit" id="orbit-1"></div>
+			<div class="orbit" id="orbit-2"></div>
+			<div class="orbit" id="orbit-3"></div>
+			<div class="orbit" id="orbit-4"></div>
+
+		</section>
+		<section id="sidebar">
+			<header><h1>宇宙飞船系统</h1><i>V 3.0</i></header>
+			<section class="control">
+				<header class=title><h1 class="">控制面板</h1></header>
+				<div class="board control-board">
+					<ul class="ship-list">
+
+					</ul>
+					<div class="ship-add-container">
+						<div class="queen-container orbit-select-container">
+							<select class="queen-select orbit-select" value="1">
+								<option value="1">第一轨道</option>
+								<option value="2">第二轨道</option>
+								<option value="3">第三轨道</option>
+								<option value="4">第四轨道</option>
+							</select>
+						</div>
+						<div class="select-label">动力:</div>
+						<div class="queen-container power-select-container">
+							<select class="queen-select power-select" value="0">
+								<option value="0">前进号(速度80px/s 能耗5%/s)</option>
+								<option value="1">奔腾号(速度100px/s 能耗7%/s)</option>
+								<option value="2">超越号(速度140px/s 能耗10%/s)</option>
+							</select>
+						</div>
+					</div>
+					<div class="ship-add-container">
+						<div class="select-label">能源:</div>
+						<div class="queen-container energy-select-container">
+							<select class="queen-select energy-select" value="0">
+								<option value="0">劲量型(能源恢复 2%/s)</option>
+								<option value="1">光能型(能源恢复 3%/s)</option>
+								<option value="2">永久型(能源恢复 4%/s)</option>
+							</select>
+						</div>
+
+						<div class="ship-add">发射新飞船</div>
+					</div>
+				</div>
+			</section>
+			<section class="monitor">
+				<header class=title><h1 class="">监控面板</h1></header>
+				<div class="board monitor-board">
+					<table class="monitor-table">
+						<thead>
+							<tr class="monitor-title">
+								<th>飞船</th>
+								<th>动力系统</th>
+								<th>能源系统</th>
+								<th>飞行状态</th>
+								<th>剩余能源(%)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- <tr class="monitor-item">
+								<td class="color-info">11号</td>
+								<td class="color-info">前进号</td>
+								<td class="color-info">劲量型</td>
+								<td class="color-warning">飞行中</td>
+								<td class="color-success">55</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section class="console">
+				<header class="title"><h1 class="">信息面板</h1></header>
+				<div class="board console-board">
+					<ul class="console-list">
+
+					</ul>
+				</div>
+			</section>
+		</section>
+	</div>
+</body>
+</html>
