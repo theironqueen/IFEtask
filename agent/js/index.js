@@ -14,6 +14,7 @@ $(window).load(function(){
 
 	init();
 	GameStart();
+
 	function init(){
 		Config.init();
 		gameHeight = Config.Game.getGameHeight();
@@ -67,7 +68,7 @@ $(window).load(function(){
 		finder = new PF.AStarFinder();
 		path = new Array();
 
-		requestAnimationFrame(moveTest);
+		requestAnimationFrame(refresh);
 	}
 	function canvasTouch(e){
 		var _touch = e.originalEvent.changedTouches[0];
@@ -110,7 +111,7 @@ $(window).load(function(){
 		
 	}
 	
-	function moveTest(){
+	function refresh(){
 		context.clearRect(0,0,canvasWidth,canvasHeight);
 		Agent.draw();
 		Target.draw();
@@ -129,7 +130,7 @@ $(window).load(function(){
 			}
 		}
 		if(singleGameFlag)
-			requestAnimationFrame(moveTest);
+			requestAnimationFrame(refresh);
 		else {
 			GameNext();
 			GameStart();
@@ -142,20 +143,5 @@ $(window).load(function(){
 		$("#level").html(Game.getLevel());
 		$("#score").html(Game.getScore());
 	}
-	// var k = 1;
-	// function hehe(){
-	// 	if(!Agent.isWalk()){
-	// 		k++;
-	// 		if(k<8){
-	// 			Agent.moveTo(1,k);
-	// 			setTimeout(hehe,100);
-	// 		}
-	// 	}else {
-	// 		setTimeout(hehe,100);
-	// 	}
-		
-	// }
-
-	// hehe();
 	
 });
