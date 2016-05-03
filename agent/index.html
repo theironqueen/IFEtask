@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+	<!-- 声明文档使用的字符编码 -->
+    <meta charset='utf-8'>
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport"  content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+	<title>王牌特工</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+	<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="./js/pathfinding-browser.min.js"></script>
+	<script type="text/javascript" src="./js/tool.js"></script>
+	<script type="text/javascript" src="./js/agent-config.js"></script>
+	<script type="text/javascript" src="./js/game.js"></script>
+	<script type="text/javascript" src="./js/agent.js"></script>
+	<script type="text/javascript" src="./js/wall.js"></script>
+	<script type="text/javascript" src="./js/target.js"></script>
+	<script type="text/javascript" src="./js/wall-control.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<section id="agent-container">
+		<header id="agent-header"><h1>王牌特工</h1><div class="message"><p class="level">第<span id="level">1</span>关</p><p class="score">得分:<span id="score">0</span></p></div></header>
+		<section id="agent-main">
+			<canvas id="game-main">
+				
+			</canvas>
+		</section>
+	</section>
+	<img id="wall-image" src="./image/wall.png" style="display:none;">
+	<img id="agent-image" src="./image/agent.png" style="display:none;">
+	<img id="target-image" src="./image/target.png" style="display:none;">
+</body>
+</html>
